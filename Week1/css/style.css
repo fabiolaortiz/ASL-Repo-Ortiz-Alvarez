@@ -1,0 +1,21 @@
+body {
+    background-color: #8ba8af;
+}
+
+img {
+    width: 300px;
+}
+
+.brand img {
+    width: 74px;
+    float: left;
+}
+
+.nav > li > a:hover {
+     text-decoration: underline;
+ }
+
+.form
+{
+    margin-top: 60px;
+}
