@@ -34,7 +34,7 @@
 </header>
 <section class="form">
     <?php form_open('Pages/signUpSubmit');?>
-    <form class="form-horizontal" method="post">
+    <form class="form-horizontal" action="http://localhost:8888/index.php/pages/signupform/create_user" method="post">
         <div class="form-group">
             <label for="fName" class="col-sm-4 control-label">First Name</label>
             <div class="col-sm-4">
@@ -44,19 +44,21 @@
         <div class="form-group">
             <label for="lName" class="col-sm-4 control-label">Last Name</label>
             <div class="col-sm-4">
-                <?php echo form_input(['name' => 'lName', 'id' => 'lname', 'class' => 'form-control', 'value' => set_value('lname'), 'placeholder' => 'Smith']); ?>
+                <?php echo form_input(['name' => 'lname', 'id' => 'lname', 'class' => 'form-control', 'value' => set_value('lname'), 'placeholder' => 'Smith']); ?>
             </div>
         </div>
         <div class="form-group">
             <label for="email" class="col-sm-4 control-label">Email</label>
             <div class="col-sm-4">
                 <?php echo form_input(['name' => 'email', 'id' => 'email', 'class' => 'form-control', 'value' => set_value('email'), 'placeholder' => 'Email']); ?>
+                <span class="help-block" <?php echo form_error('email');?></span>
             </div>
         </div>
         <div class="form-group">
             <label for="password" class="col-sm-4 control-label">Password</label>
             <div class="col-sm-4">
                 <?php echo form_password(['name' => 'password', 'id' => 'password', 'class' => 'form-control', 'placeholder' => 'Password']); ?>
+                <span class="help-block" <?php echo form_error('password');?></span>
             </div>
         </div>
         <div class="form-group">
